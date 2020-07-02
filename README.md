@@ -1,8 +1,8 @@
-# test01
+# fake
 
-[![Build Status](https://travis-ci.org/infOpen/ansible-role-test01.svg?branch=master)](https://travis-ci.org/infOpen/ansible-role-test01)
+[![Build Status](https://travis-ci.org/infOpen/ansible-role-fake.svg?branch=master)](https://travis-ci.org/infOpen/ansible-role-fake)
 
-Install test01 package.
+Install fake package.
 
 ## Requirements
 
@@ -60,7 +60,7 @@ None
 ``` yaml
 - hosts: servers
   roles:
-    - { role: foobar.test01 }
+    - { role: foobar.fake }
 ```
 
 ## License

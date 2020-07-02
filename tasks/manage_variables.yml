@@ -6,7 +6,7 @@
   become: False
   stat:
     path: "{{ role_path }}/vars/os_family/{{ ansible_os_family | lower }}.yml"
-  register: 'test01_check_os_family_vars'
+  register: 'fake_check_os_family_vars'
   delegate_to: '127.0.0.1'
 
 
@@ -14,7 +14,7 @@
   become: False
   stat:
     path: "{{ role_path }}/vars/os_distribution/{{ ansible_distribution | lower }}.yml"
-  register: 'test01_check_os_distribution_vars'
+  register: 'fake_check_os_distribution_vars'
   delegate_to: '127.0.0.1'
 
 
@@ -22,20 +22,20 @@
   become: False
   stat:
     path: "{{ role_path }}/vars/os_distribution/{{ ansible_distribution | lower }}/{{ ansible_distribution_release | lower }}.yml"
-  register: 'test01_check_os_release_vars'
+  register: 'fake_check_os_release_vars'
   delegate_to: '127.0.0.1'
 
 
 - name: 'INIT | VARIABLES | Load OS family vars file'
   include_vars: "{{ role_path }}/vars/os_family/{{ ansible_os_family | lower }}.yml"
-  when: "test01_check_os_family_vars.stat.exists"
+  when: "fake_check_os_family_vars.stat.exists"
 
 
 - name: 'INIT | VARIABLES | Load OS distribution vars file'
   include_vars: "{{ role_path }}/vars/os_distribution/{{ ansible_distribution | lower }}.yml"
-  when: "test01_check_os_distribution_vars.stat.exists"
+  when: "fake_check_os_distribution_vars.stat.exists"
 
 
 - name: 'INIT | VARIABLES | Load OS release vars file'
   include_vars: "{{ role_path }}/vars/os_distribution/{{ ansible_distribution | lower }}/{{ ansible_distribution_release | lower }}.yml"
-  when: "test01_check_os_release_vars.stat.exists"
+  when: "fake_check_os_release_vars.stat.exists"

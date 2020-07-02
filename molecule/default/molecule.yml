@@ -10,32 +10,32 @@ lint: |
   ansible-lint
   flake8
 platforms:
-  - name: "test01-docker-centos7"
+  - name: "fake-docker-centos7"
     image: 'jrei/systemd-centos:7'
     privileged: True
     volumes:
       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-  - name: "test01-docker-centos8"
+  - name: "fake-docker-centos8"
     image: 'jrei/systemd-centos:7'
     privileged: True
     volumes:
       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-  - name: "test01-docker-debian9"
+  - name: "fake-docker-debian9"
     image: 'jrei/systemd-debian:latest'
     privileged: True
     volumes:
       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-  - name: "test01-docker-debian10"
+  - name: "fake-docker-debian10"
     image: 'jrei/systemd-debian:latest'
     privileged: True
     volumes:
       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-  - name: "test01-docker-ubuntu18"
+  - name: "fake-docker-ubuntu18"
     image: 'jrei/systemd-ubuntu:18.04'
     privileged: True
     volumes:
       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-  - name: "test01-docker-ubuntu20"
+  - name: "fake-docker-ubuntu20"
     image: 'jrei/systemd-ubuntu:20.04'
     privileged: True
     volumes:
