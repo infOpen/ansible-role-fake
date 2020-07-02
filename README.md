@@ -1,6 +1,8 @@
 # fake
 
-[![Build Status](https://travis-ci.org/infOpen/ansible-role-fake.svg?branch=master)](https://travis-ci.org/infOpen/ansible-role-fake)
+[![CI](https://github.com/infOpen/ansible-role-fake/workflows/CI/badge.svg)](https://github.com/infOpen/ansible-role-fake/actions)
+[![Updates](https://pyup.io/repos/github/infOpen/ansible-role-fake/shield.svg)](https://pyup.io/repos/github/infOpen/ansible-role-fake/)
+[![Python 3](https://pyup.io/repos/github/infOpen/ansible-role-fake/python-3-shield.svg)](https://pyup.io/repos/github/infOpen/ansible-role-fake/)
 
 Install fake package.
 
