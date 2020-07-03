@@ -1,6 +1,7 @@
 # fake
 
 [![CI](https://github.com/infOpen/ansible-role-fake/workflows/CI/badge.svg)](https://github.com/infOpen/ansible-role-fake/actions)
+[![Mergify Status][mergify-status]][mergify]
 [![Updates](https://pyup.io/repos/github/infOpen/ansible-role-fake/shield.svg)](https://pyup.io/repos/github/infOpen/ansible-role-fake/)
 [![Python 3](https://pyup.io/repos/github/infOpen/ansible-role-fake/python-3-shield.svg)](https://pyup.io/repos/github/infOpen/ansible-role-fake/)
 
@@ -15,7 +16,7 @@ and platform requirements are listed in the metadata file.
 
 This role use [Molecule](https://github.com/ansible-community/molecule) to run tests.
 
-Local and Travis tests run tests on Docker by default.
+Local and Github Actions tests run tests on Docker by default.
 See molecule documentation to use other backend.
 
 Currently, tests are done on:
@@ -74,3 +75,6 @@ MIT
 Foo Bar (for Foobar Inc. company)
 - http://foo.bar
 - foo [at] bar
+
+[mergify]: https://mergify.io
+[mergify-status]: https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges/infOpen/ansible-role-fake&style=flat
