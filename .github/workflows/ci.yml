@@ -30,12 +30,9 @@ jobs:
         run: |
           tox
   release:
+    if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
     needs:
       - tests
-    on:
-      push:
-        branches:
-          - refs/tags/*
     runs-on: ubuntu-latest
     steps:
       - name: Upload to galaxy
