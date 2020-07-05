@@ -1,0 +1,9 @@
+---
+
+# Main tasks file for fake role
+
+- name: 'INIT | Manage variables to use for our target'
+  import_tasks: "{{ role_path }}/tasks/manage_variables.yml"
+  tags:
+    - 'role::fake'
+    - 'role::fake::init'
