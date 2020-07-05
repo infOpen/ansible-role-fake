@@ -29,3 +29,16 @@ jobs:
           TOXENV: py${{ matrix.python-version }}-ansible${{ matrix.ansible-version }}
         run: |
           tox
+  release:
+    needs:
+      - tests
+    on:
+      push:
+        branches:
+          - refs/tags/*
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload to galaxy
+        uses: robertdebock/galaxy-action@1.0.3
+        with:
+          galaxy_api_key: ${{ secrets.galaxy_api_key }}
