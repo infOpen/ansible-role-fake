@@ -5,8 +5,21 @@ pull_request_rules:
     conditions:
       - 'author=pyup-bot'
       - 'base=develop'
-      - 'status-success~=tests.*'
-      - '-status-failure~=tests.*'
+      - 'status-success=pyup.io/safety-ci'
+      - 'status-success=tests (3.6, 2.8)'
+      - 'status-success=tests (3.6, 2.9)'
+      - 'status-success=tests (3.7, 2.8)'
+      - 'status-success=tests (3.7, 2.9)'
+      - 'status-success=tests (3.8, 2.8)'
+      - 'status-success=tests (3.8, 2.9)'
+      - '-status-failure=pyup.io/safety-ci'
+      - '-status-failure=tests (3.6, 2.8)'
+      - '-status-failure=tests (3.6, 2.9)'
+      - '-status-failure=tests (3.7, 2.8)'
+      - '-status-failure=tests (3.7, 2.9)'
+      - '-status-failure=tests (3.8, 2.8)'
+      - '-status-failure=tests (3.8, 2.9)'
     actions:
+      delete_head_branch: {}
       merge:
         method: 'merge'
