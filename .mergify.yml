@@ -5,7 +5,8 @@ pull_request_rules:
     conditions:
       - 'author=pyup-bot'
       - 'base=develop'
-      - 'status-success=CI / tests'
+      - 'status-success~=tests.*'
+      - '-status-failure~=tests.*'
     actions:
       merge:
         method: 'merge'
