@@ -17,7 +17,7 @@ pull_request_rules:
           - 'ready to merge'
   - name: 'Assign all PR to achaussier'
     conditions:
-      - 'assignee='
+      - '#assignee=0'
     actions:
       assign:
         users:
