@@ -17,14 +17,14 @@ pull_request_rules:
           - 'ready to merge'
   - name: 'Assign all PR to achaussier'
     conditions:
-      - 'assignee~=^$'
+      - 'assignee='
     actions:
       assign:
         users:
           - 'achaussier'
   - name: 'Remove label "ready to merge" in case of CI errors'
     conditions:
-      - '-status-failure~=.*'
+      - 'status-failure~=.*'
     actions:
       label:
         remove:
@@ -70,6 +70,7 @@ pull_request_rules:
   - name: 'Add label "ready to merge" if CI is OK'
     conditions:
       - 'base=develop'
+      - '-draft'
       - 'status-success=pyup.io/safety-ci'
       - 'status-success=tests (3.6, 2.8)'
       - 'status-success=tests (3.6, 2.9)'
