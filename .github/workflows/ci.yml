@@ -5,8 +5,12 @@ name: CI
 on:
   pull_request: null
   push:
+    branches:
+      - '*'
     branches-ignore:
       - 'pyup-update*'
+    tags:
+      - '*'
 
 jobs:
   tests:
