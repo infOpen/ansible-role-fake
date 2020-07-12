@@ -17,3 +17,5 @@ jobs:
           yaml_file: .github/labels.yml
           skip_delete: false
           dry_run: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
